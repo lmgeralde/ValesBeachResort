@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Admin Dashboard') }}
+            {{ __('Dashboard') }}
         </h2>
     </x-slot>
 
@@ -47,10 +47,8 @@
                                 </td>
                                 <td class="py-3 px-6 text-center">
                                     <div class="flex item-center justify-center">
-                                        <!-- Edit button -->
                                         <a href="{{ route('admin.staff.edit', $user) }}" class="text-indigo-600 hover:text-indigo-900 mr-2">Edit</a>
 
-                                        <!-- Delete button -->
                                         <form action="{{ route('admin.staff.destroy', $user) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this user?');">
                                             @csrf
                                             @method('DELETE')
