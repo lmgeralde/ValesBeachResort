@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@valesresort.com',
             'password' => Hash::make('admin123'),
-            'is_admin' => 1,
+            'role' => 'Admin',
         ]);
 
         // Create a Staff user
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Staff',
             'email' => 'staff@gmail.com',
             'password' => Hash::make('111'),
-            'is_staff' => 1,
+            'role' => 'Staff',
         ]);
 
         // Create a regular user
@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'User',
             'email' => 'user@gmail.com',
             'password' => Hash::make('111'),
+            // The role will default to 'Staff' based on your migration file
         ]);
     }
 }
